@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_bottom_dialog_bg"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="安全验证"
+            android:textColor="@color/color_222F4D"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical|end"
+            android:text="取消"
+            android:textColor="@color/tab_normal"
+            android:textSize="18sp" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="24dp"
+        android:text="xiaoge****@outlook.com"
+        android:textColor="@color/tab_normal"
+        android:textSize="14sp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="10dp">
+
+        <EditText
+            android:id="@+id/et_email_code"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/selector_edit_bg"
+            android:gravity="center_vertical"
+            android:hint="邮箱验证码"
+            android:inputType="number"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_get_email_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:padding="5dp"
+            android:text="获取"
+            android:textColor="@drawable/selector_code_get_text_color"
+            android:textSize="18sp" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="24dp"
+        android:text="138****8888"
+        android:textColor="@color/tab_normal"
+        android:textSize="14sp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="10dp">
+
+        <EditText
+            android:id="@+id/et_sms_code"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/selector_edit_bg"
+            android:gravity="center_vertical"
+            android:hint="短信验证码"
+            android:inputType="number"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_get_sms_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:padding="5dp"
+            android:text="获取"
+            android:textColor="@drawable/selector_code_get_text_color"
+            android:textSize="18sp" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/selector_btn_bg1"
+        android:enabled="false"
+        android:text="下一步"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+</LinearLayout>

@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingConstraints">
+
+    <ImageView
+        android:id="@+id/iv_coin_symbol"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/icon_logo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_symbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="11dp"
+        android:text="--/--"
+        android:textColor="@color/color_33"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/iv_coin_symbol" />
+
+    <ImageView
+        android:id="@+id/iv_symbol"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="5dp"
+        android:src="@drawable/icon_arrow_down"
+        app:layout_constraintBottom_toBottomOf="@id/tv_symbol"
+        app:layout_constraintLeft_toRightOf="@id/tv_symbol"
+        app:layout_constraintTop_toTopOf="@id/tv_symbol"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/iv_k_line"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/icon_k_line"
+        app:layout_constraintRight_toLeftOf="@id/cb_like"
+        app:layout_constraintTop_toTopOf="@id/cb_like" />
+
+    <CheckBox
+        android:id="@+id/cb_like"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/selector_tx_like"
+        android:button="@null"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/srf"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_symbol">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/gl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.54" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/gl1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.76" />
+
+                <TextView
+                    android:id="@+id/tv_buy"
+                    android:layout_width="0dp"
+                    android:layout_height="34dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/shape_tx_switch_buy"
+                    android:gravity="center"
+                    android:text="买入"
+                    android:textColor="@drawable/selector_exchange_text_color"
+                    android:textSize="16sp"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/tv_sell"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_sell"
+                    android:layout_width="0dp"
+                    android:layout_height="34dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/shape_tx_switch_sell"
+                    android:gravity="center"
+                    android:text="卖出"
+                    android:textColor="@drawable/selector_exchange_text_color"
+                    android:textSize="16sp"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintLeft_toRightOf="@id/tv_buy"
+                    app:layout_constraintRight_toRightOf="@id/gl"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.helper.widget.Layer
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_transaction_switch"
+                    android:padding="2dp"
+                    app:constraint_referenced_ids="tv_buy,tv_sell" />
+
+                <TextView
+                    android:id="@+id/tv_tx_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="15dp"
+                    android:gravity="center_vertical"
+                    android:text="汇率"
+                    android:textColor="@color/color_b2"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_buy" />
+
+                <TextView
+                    android:id="@+id/tv_exchange_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="4dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:lines="1"
+                    android:text="- -"
+                    android:textColor="@color/color_33"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toRightOf="@id/tv_tx_rate"
+                    app:layout_constraintTop_toTopOf="@id/tv_tx_rate" />
+
+                <com.jumai.antexchange.ui.widget.NumberChangeView
+                    android:id="@+id/ncv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="@id/gl"
+                    app:layout_constraintTop_toBottomOf="@id/tv_tx_rate" />
+
+                <TextView
+                    android:id="@+id/tv_cny"
+                    android:layout_width="wrap_content"
+                    android:layout_height="42dp"
+                    android:layout_marginStart="15dp"
+                    android:gravity="center_vertical"
+                    android:text="≈0.00 CNY"
+                    android:textColor="@color/color_b2"
+                    android:textSize="14sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ncv" />
+
+                <EditText
+                    android:id="@+id/et_amount"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="数量"
+                    android:inputType="numberDecimal"
+                    android:paddingStart="10dp"
+                    android:textColor="@color/color_33"
+                    android:textColorHint="@color/color_b2"
+                    android:textSize="14sp"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/tv_symbol_transaction"
+                    app:layout_constraintTop_toBottomOf="@id/tv_cny" />
+
+                <TextView
+                    android:id="@+id/tv_symbol_transaction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:paddingEnd="10dp"
+                    android:text="- -"
+                    android:textColor="@color/color_b2"
+                    android:textSize="14sp"
+                    app:layout_constraintRight_toRightOf="@id/gl"
+                    app:layout_constraintTop_toBottomOf="@id/tv_cny" />
+
+                <androidx.constraintlayout.helper.widget.Layer
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_transaction_number"
+                    app:constraint_referenced_ids="et_amount,tv_symbol_transaction" />
+
+                <TextView
+                    android:id="@+id/tv_available_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="8dp"
+                    android:text="可用 0 USDT"
+                    android:textColor="@color/color_b2"
+                    android:textSize="14sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/et_amount" />
+
+                <SeekBar
+                    android:id="@+id/sb"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:max="100"
+                    android:maxHeight="4dp"
+                    android:minHeight="4dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="8dp"
+                    android:progressDrawable="@drawable/shape_seekbar_progress_buy"
+                    android:thumb="@drawable/shape_seekbar_thumb_buy"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="@id/gl"
+                    app:layout_constraintTop_toBottomOf="@id/tv_available_balance" />
+
+                <TextView
+                    android:id="@+id/tv_min_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="4dp"
+                    android:text="0"
+                    android:textColor="@color/color_b2"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/sb" />
+
+                <TextView
+                    android:id="@+id/tv_max_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="- -"
+                    android:textColor="@color/color_b2"
+                    android:textSize="12sp"
+                    app:layout_constraintRight_toRightOf="@id/gl"
+                    app:layout_constraintTop_toBottomOf="@id/sb" />
+
+                <TextView
+                    android:id="@+id/tv_tx_tips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="12dp"
+                    android:text="交易额"
+                    android:textColor="@color/color_b2"
+                    android:textSize="14sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_min_balance" />
+
+                <TextView
+                    android:id="@+id/tv_transaction_amount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:gravity="end"
+                    android:maxLines="3"
+                    android:text="- -"
+                    android:textColor="@color/color_222F4D"
+                    android:textSize="14sp"
+                    app:layout_constraintBaseline_toBaselineOf="@id/tv_tx_tips"
+                    app:layout_constraintLeft_toRightOf="@id/tv_tx_tips"
+                    app:layout_constraintRight_toRightOf="@id/gl" />
+
+                <Button
+                    android:id="@+id/bt_confirm"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/shape_transaction_buy_bg"
+                    android:text="买入- -"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintHorizontal_weight="0.51"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/gl"
+                    app:layout_constraintTop_toBottomOf="@id/tv_transaction_amount" />
+
+                <TextView
+                    android:id="@+id/tv_tx_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/tips_price"
+                    android:textColor="@color/color_b2"
+                    android:textSize="11sp"
+                    app:layout_constraintLeft_toLeftOf="@id/gl"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_tx_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|end"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:text="数量"
+                    android:textColor="@color/color_b2"
+                    android:textSize="11sp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_sell"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="15dp"
+                    android:overScrollMode="never"
+                    app:layout_constraintLeft_toLeftOf="@id/gl"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_tx_price"
+                    tools:itemCount="5"
+                    tools:listitem="@layout/item_transaction_sell_data" />
+
+                <FrameLayout
+                    android:id="@+id/fl_keep_num_set"
+                    android:layout_width="0dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="9dp"
+                    app:layout_constraintBottom_toBottomOf="@id/bt_confirm"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintLeft_toLeftOf="@id/gl"
+                    app:layout_constraintRight_toLeftOf="@id/v_line5">
+
+                    <TextView
+                        android:id="@+id/tv_keep_num_set"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableEnd="@drawable/icon_triangle_down"
+                        android:drawablePadding="2dp"
+                        android:gravity="center"
+                        android:text="@string/tips_default"
+                        android:textColor="@color/color_b2"
+                        android:textSize="12sp" />
+                </FrameLayout>
+
+                <View
+                    android:id="@+id/v_line5"
+                    android:layout_width="1dp"
+                    android:layout_height="22dp"
+                    android:background="@color/color_dfdfe0"
+                    app:layout_constraintBottom_toBottomOf="@id/bt_confirm"
+                    app:layout_constraintLeft_toRightOf="@id/fl_keep_num_set"
+                    app:layout_constraintRight_toLeftOf="@id/fl_showing_set" />
+
+                <FrameLayout
+                    android:id="@+id/fl_showing_set"
+                    android:layout_width="0dp"
+                    android:layout_height="22dp"
+                    android:layout_marginEnd="15dp"
+                    app:layout_constraintBottom_toBottomOf="@id/bt_confirm"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintLeft_toLeftOf="@id/gl1"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                    <TextView
+                        android:id="@+id/tv_showing_set"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableEnd="@drawable/icon_triangle_down"
+                        android:drawablePadding="2dp"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:text="默认"
+                        android:textColor="@color/color_b2"
+                        android:textSize="12sp" />
+                </FrameLayout>
+
+                <androidx.constraintlayout.helper.widget.Layer
+                    android:id="@+id/layer_set"
+                    android:layout_width="0dp"
+                    android:layout_height="22dp"
+                    android:background="@drawable/shape_transaction_switch"
+                    app:constraint_referenced_ids="fl_keep_num_set,v_line5,fl_showing_set"
+                    app:layout_constraintHorizontal_weight="0.46"
+                    app:layout_constraintLeft_toRightOf="@id/bt_confirm"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_buy"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="7dp"
+                    android:overScrollMode="never"
+                    app:layout_constraintBottom_toTopOf="@id/fl_showing_set"
+                    app:layout_constraintLeft_toLeftOf="@id/gl"
+                    app:layout_constraintRight_toRightOf="parent"
+                    tools:itemCount="5"
+                    tools:listitem="@layout/item_transaction_buy_data" />
+
+                <TextView
+                    android:id="@+id/tv_latest_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="9dp"
+                    android:text="- -"
+                    android:textColor="@color/color_33"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toTopOf="@id/tv_latest_cny"
+                    app:layout_constraintLeft_toLeftOf="@id/gl"
+                    app:layout_constraintTop_toBottomOf="@id/rv_sell" />
+
+                <TextView
+                    android:id="@+id/tv_latest_cny"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginBottom="12dp"
+                    android:text="≈- - CNY"
+                    android:textColor="@color/tab_normal"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toTopOf="@id/rv_buy"
+                    app:layout_constraintLeft_toLeftOf="@id/gl" />
+
+                <View
+                    android:id="@+id/v_line3"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_marginTop="22dp"
+                    android:background="#F7F8FA"
+                    app:layout_constraintTop_toBottomOf="@+id/bt_confirm" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="15dp"
+                    android:gravity="center_vertical"
+                    android:text="当前委托"
+                    android:textColor="@color/color_33"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/v_line3" />
+
+                <TextView
+                    android:id="@+id/tv_all_transaction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="15dp"
+                    android:drawableEnd="@drawable/icon_arrow_right"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:text="全部"
+                    android:textColor="@color/color_b2"
+                    android:textSize="14sp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/v_line3" />
+
+                <View
+                    android:id="@+id/v_line4"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/color_EDEEF0"
+                    app:layout_constraintTop_toBottomOf="@id/tv_all_transaction" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_transaction"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overScrollMode="never"
+                    app:layout_constraintTop_toBottomOf="@id/v_line4" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.jumai.antexchange.ui.widget.HmView
+            android:layout_width="match_parent"
+            android:layout_marginBottom="-166dp"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

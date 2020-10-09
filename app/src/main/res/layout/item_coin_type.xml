@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="52dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tv_coin"
+            android:text="DOCK"
+            android:layout_marginLeft="15dp"
+            android:layout_centerVertical="true"
+            android:textColor="#222F4D"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"/>
+        <TextView
+            android:id="@+id/tv_other_coin"
+            android:layout_toRightOf="@+id/tv_coin"
+            android:text="/BTC"
+            android:textColor="#C8CBD2"
+            android:layout_marginTop="20dp"
+            android:textSize="12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tv_money"
+            android:text="0.0000600074"
+            android:textSize="16sp"
+            android:textColor="#F0486F"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <View
+        android:layout_alignParentBottom="true"
+        android:background="#EDEEF0"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_centerHorizontal="true"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/icon_announcement" />
+
+    <TextView
+        android:id="@+id/tv_tag_hot"
+        android:layout_width="25dp"
+        android:layout_height="12dp"
+        android:layout_alignTop="@id/iv_icon"
+        android:layout_marginTop="-3dp"
+        android:background="@drawable/shape_point_red"
+        android:gravity="center"
+        android:layout_alignRight="@id/iv_icon"
+        android:layout_marginEnd="-18dp"
+        android:text="HOT"
+        android:textColor="@color/white"
+        android:textSize="8sp" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_icon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="币币交易"
+        android:textColor="@color/color_222F4D"
+        android:textSize="11sp" />
+</RelativeLayout>

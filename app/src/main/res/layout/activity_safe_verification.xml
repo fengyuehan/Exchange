@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_marginLeft="26dp"
+        android:padding="10dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/icon_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:text="安全验证"
+        android:textColor="#222F4D"
+        android:textSize="22sp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="42dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:text="已向zhoumige88@outlook.com发送验证码"
+        android:textSize="14sp"
+        android:textColor="#222F4D"
+        android:alpha="0.4"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.jumai.antexchange.view.VerificationCodeView
+        android:id="@+id/vcv"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:vcv_et_bg="@drawable/et_box_code_bg"
+        app:vcv_et_cursor="@drawable/et_cursor"
+        app:vcv_et_inputType="number"
+        app:vcv_et_number="6"
+        app:vcv_et_text_color="#356DF0"
+        app:vcv_et_width ="40dp"
+        app:vcv_et_text_size="22sp"
+        app:vcv_et_spacing ="15dp"
+        app:vcv_et_textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_tips"
+        android:text="验证码错误 请重新输入"
+        android:textColor="#F0486F"
+        android:textSize="16sp"
+        android:layout_marginTop="32dp"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:id="@+id/ll_time"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_time"
+            android:text="59s"
+            android:textSize="16sp"
+            android:textColor="#222F4D"
+            android:alpha="0.4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tv_content"
+            android:text="重新获取"
+            android:textSize="16sp"
+            android:textColor="@drawable/selector_verification_code_bg"
+            android:alpha="0.4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>

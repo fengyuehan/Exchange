@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_go_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="11dp"
+            android:padding="5dp"
+            android:src="@drawable/icon_go_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="KYC2认证"
+            android:textColor="#222F4D"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_tip"
+        android:layout_below="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="15dp"
+        android:alpha="0.4"
+        android:background="#FFF8F9"
+        android:gravity="left|center"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="失败原因：您的图片太模糊，请保证图片清晰，不可遮挡内容，不可擅自修改图片内容，请重新提交实名认证。"
+        android:textColor="#F0486F"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/iv_result_img"
+        android:layout_marginTop="56dp"
+        android:layout_centerInParent="true"
+        android:layout_width="70dp"
+        android:layout_height="70dp"/>
+    <TextView
+        android:layout_below="@+id/iv_result_img"
+        android:id="@+id/tv_certification_result"
+        android:text="认证失败"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_sure_commit"
+        android:text="确认提交"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/shape_sure_commit_bg2"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"/>
+</RelativeLayout>

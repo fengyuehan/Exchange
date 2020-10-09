@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginRight="30dp"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tv_catalog"
+        android:text="A"
+        android:gravity="center_vertical"
+        android:textColor="#356DF0"
+        android:textSize="16sp"
+        android:background="#F7F8FA"
+        android:paddingLeft="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"/>
+    <TextView
+        android:id="@+id/tv_coin_type"
+        android:layout_below="@+id/tv_catalog"
+        android:gravity="center_vertical"
+        android:text="AAC"
+        android:textColor="#222F4D"
+        android:textSize="16sp"
+        android:layout_marginLeft="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"/>
+    <View
+        android:id="@+id/view"
+        android:background="#EDEEF0"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+</LinearLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="73dp"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ETH"
+                android:textColor="#222F4D"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_other_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/BTC"
+                android:textColor="#C8CBD2"
+                android:textSize="12sp" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_amount"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="24H量 2500.23"
+            android:textColor="#C8CBD2"
+            android:textSize="12sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.02080090"
+            android:textColor="#16B887"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1490.88 CNY"
+            android:textColor="#C8CBD2"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_marginRight="15dp"
+        android:gravity="right"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_fee"
+            android:gravity="center"
+            android:text="+7.68%"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:background="@drawable/shape_quotation_bg"
+            android:layout_width="74dp"
+            android:layout_height="32dp"/>
+    </LinearLayout>
+
+</LinearLayout>

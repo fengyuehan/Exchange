@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="102dp"
+    tools:ignore="MissingConstraints">
+
+    <TextView
+        android:id="@+id/tx_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="18dp"
+        android:text="买入"
+        android:textColor="@color/color_16B887"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tx_symbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BTC"
+        android:textColor="@color/color_222F4D"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/tx_type"
+        app:layout_constraintLeft_toRightOf="@id/tx_type" />
+
+    <TextView
+        android:id="@+id/tx_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="2019-09-01 08:30:30"
+        android:textColor="@color/color_222F4D"
+        android:textSize="12sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tx_symbol"
+        app:layout_constraintLeft_toRightOf="@id/tx_symbol" />
+
+
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/shape_cancel_bg"
+        android:gravity="center"
+        android:text="撤销"
+        android:textColor="@color/tab_selected"
+        android:textSize="12sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_tip_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="14dp"
+        android:text="价格(USDT)"
+        android:textColor="@color/tab_normal"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tv_tip_amount"
+        app:layout_constraintTop_toBottomOf="@id/tx_type" />
+
+    <TextView
+        android:id="@+id/tv_tip_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="数量(BTC)"
+        android:textColor="@color/tab_normal"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toRightOf="@+id/tv_tip_price"
+        app:layout_constraintRight_toLeftOf="@+id/tv_tip_clinch"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tx_type" />
+
+    <TextView
+        android:id="@+id/tv_tip_clinch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="16dp"
+        android:text="实际成交(BTC)"
+        android:textColor="@color/tab_normal"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toRightOf="@+id/tv_tip_amount"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tx_type" />
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="10338.99"
+        android:textColor="@color/color_222F4D"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/tv_tip_price"
+        app:layout_constraintTop_toBottomOf="@id/tv_tip_price" />
+
+    <TextView
+        android:id="@+id/tv_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="0.18910009"
+        android:textColor="@color/color_222F4D"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/tv_tip_amount"
+        app:layout_constraintTop_toBottomOf="@id/tv_tip_amount" />
+
+    <TextView
+        android:id="@+id/tv_clinch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="0.00"
+        android:textColor="@color/color_222F4D"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="@id/tv_tip_clinch"
+        app:layout_constraintTop_toBottomOf="@id/tv_tip_clinch" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_EDEEF0"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

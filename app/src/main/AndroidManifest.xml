@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.jumai.antexchange">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:name=".base.AntApplication"
+        android:fullBackupContent="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:maxAspectRatio="2.4"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:resizeableActivity="true"
+        android:roundIcon="@drawable/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppBaseTheme"
+        tools:ignore="GoogleAppIndexingWarning,UnusedAttribute">
+        <activity android:name=".ui.main.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--登录-->
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+
+        <!--搜索币-->
+        <activity
+            android:name=".ui.market.search.CoinSearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+
+        <!--编辑币-->
+        <activity
+            android:name=".ui.market.edit.CoinEditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+
+        <!--手机注册-->
+        <activity
+            android:name=".ui.register.phoneregister.PhoneRegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+
+        <!--忘记密码-->
+        <activity
+            android:name=".ui.forgetpassword.ForgetPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+
+        <!--密码设置-->
+        <activity
+            android:name=".ui.passwordsetting.PassWordSettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+
+        <!--邮箱注册-->
+        <activity
+            android:name=".ui.register.emileregister.EmileRegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+
+        <!--IP设置-->
+        <activity
+            android:name=".ui.ipSetting.IpSettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+
+        <!--历史记录-->
+        <activity
+            android:name=".ui.historyrecord.activity.HistoryRecordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+
+        <!--地区区号-->
+        <activity
+            android:name=".ui.areacode.AreaCodeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+
+        <!--单个资产详情-->
+        <activity
+            android:name=".ui.asset.detail.SingleDetailAcivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+
+        <!--币币交易-->
+        <activity
+            android:name=".ui.asset.coindetail.CoinDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+
+        <!--法币交易-->
+        <activity
+            android:name=".ui.asset.legalcoindetail.LegalCoinDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+
+        <!--充币-->
+        <activity
+            android:name=".ui.asset.rechargecoin.RechargeCoinActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+
+        <!--MainActivity-->
+        <activity
+            android:name=".ui.splash.SplashActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <!--K线图页面-->
+        <activity
+            android:name=".ui.transcation.ChartActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+
+        <!--提币页面-->
+        <activity
+            android:name=".ui.asset.CoinOutActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <!--充币选择-->
+        <activity
+            android:name=".ui.asset.coinlist.CoinListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <!--划转-->
+        <activity
+            android:name=".ui.asset.transfer.TransferCoinActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <!--划转记录-->
+        <activity
+            android:name=".ui.asset.transferrecord.TransferCoinRecordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <!--关于我们-->
+        <activity
+            android:name=".ui.mine.about.AboutUsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <!--设置-->
+        <activity
+            android:name=".ui.mine.set.SetActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <!--订单详情-->
+        <activity
+            android:name=".ui.historyrecord.activity.OrderDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <!--认证-->
+        <activity
+            android:name=".ui.kyc.KYCCertificationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <!--手机认证-->
+        <activity
+            android:name=".ui.kyc.phonecertification.PhoneCertificationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <!--邮箱认证-->
+        <activity
+            android:name=".ui.kyc.emilecertification.EmileCertificationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <!--国家认证-->
+        <activity
+            android:name=".ui.kyc.countrycertification.CountryCertificationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <!--身份证认证-->
+        <activity
+            android:name=".ui.kyc.IDcardcertification.IDCardCertificationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+
+        <!--收款地址页面-->
+        <activity
+            android:name=".ui.asset.AddressActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <!--收款地址增加页面-->
+        <activity
+            android:name=".ui.asset.AddressAddActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <!--账户设置页面-->
+        <activity
+            android:name=".ui.mine.account_center.AccountSettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <!--手机验证/邮箱验证页面-->
+        <activity
+            android:name=".ui.mine.account_center.PhoneEmailVerificationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!--交易密码修改页面-->
+        <activity
+            android:name=".ui.mine.account_center.TradeSettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="375" />
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="812" />
+
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.4" />
+
+        <!--适配华为（huawei）刘海屏-->
+        <meta-data
+            android:name="android.notch_support"
+            android:value="true" />
+
+        <!--适配小米（xiaomi）刘海屏-->
+        <meta-data
+            android:name="notch.config"
+            android:value="portrait|landscape" />
+    </application>
+
+</manifest>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_marginLeft="16dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_go_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"/>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tablayout"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="#222F4D"
+            app:tabTextColor="#B2B6C1"
+            app:tabTextAppearance="@style/TabText"
+            />
+
+
+        <ImageView
+            android:id="@+id/iv_select"
+            android:layout_marginLeft="16dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_select"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"/>
+    </RelativeLayout>
+    <View
+        android:background="#F7F8FA"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

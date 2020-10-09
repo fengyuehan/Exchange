@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jumai.antexchange.view.SwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_marginTop="8dp"
+    app:ios="true"
+    app:leftSwipe="true"
+    app:swipeEnable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_memo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:text="周老板的交易所BTC地址"
+                android:textColor="@color/color_222F4D"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_chain_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/shape_address_chain_bg"
+                android:padding="5dp"
+                android:text="OMNI链"
+                android:textColor="@color/color_356DF0F"
+                android:textSize="10sp" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="16dp"
+            android:text="sdsads546a5s62das1da54d5a4s1a21242ewq"
+            android:textColor="@color/tab_normal"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/icon_delete"
+            android:padding="12dp" />
+    </FrameLayout>
+</com.jumai.antexchange.view.SwipeMenuLayout>

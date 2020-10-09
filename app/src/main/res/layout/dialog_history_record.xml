@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="38dp"
+        android:layout_height="6dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="19dp"
+        android:layout_marginBottom="19dp"
+        android:background="@drawable/shape_dialog_text_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="币种"
+            android:textColor="#222F4D"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/et_coin_type"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/shape_select_coin_search"
+            android:hint="请输入币种"
+            android:paddingLeft="8dp"
+            android:text=""
+            android:textColor="#222F4D"
+            android:textColorHint="#C8CBD2"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="24dp"
+            android:text="计价单位"
+            android:textColor="#222F4D"
+            android:textSize="16sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="28dp"
+            android:text="订单状态"
+            android:textColor="#222F4D"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="15dp">
+
+            <CheckBox
+                android:id="@+id/cb_buy"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_order_status_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="买入"
+                android:textColor="@drawable/selector_order_status_text_color"
+                android:textSize="14sp" />
+
+            <CheckBox
+                android:id="@+id/cb_sell"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_order_status_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="卖出"
+                android:textColor="@drawable/selector_order_status_text_color"
+                android:textSize="14sp" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="15dp">
+
+            <CheckBox
+                android:id="@+id/cb_complete"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_order_status_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="已完成"
+                android:textColor="@drawable/selector_order_status_text_color"
+                android:textSize="14sp" />
+
+            <CheckBox
+                android:id="@+id/cb_cancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_order_status_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="已撤销"
+                android:textColor="@drawable/selector_order_status_text_color"
+                android:textSize="14sp" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="155dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_reset"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_reset_button_bg"
+                android:gravity="center"
+                android:text="重置"
+                android:textColor="#222F4D"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_sure"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="9dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_sure_button_bg"
+                android:gravity="center"
+                android:text="完成"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

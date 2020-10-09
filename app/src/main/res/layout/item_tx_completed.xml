@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:paddingStart="13dp"
+    android:paddingEnd="13dp"
+    tools:ignore="MissingConstraints">
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15:05:45"
+        android:textColor="@color/color_222F4D"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/tv_price"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10060.98"
+        android:textColor="@color/color_16B887"
+        android:textSize="12sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_time"
+        app:layout_constraintLeft_toRightOf="@id/tv_time"
+        app:layout_constraintRight_toLeftOf="@id/tv_amount" />
+
+    <TextView
+        android:id="@+id/tv_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.2218908"
+        android:textColor="@color/color_222F4D"
+        android:textSize="12sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_price"
+        app:layout_constraintLeft_toRightOf="@id/tv_price"
+        app:layout_constraintRight_toRightOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

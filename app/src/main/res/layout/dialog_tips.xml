@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="315dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_custom_dialog_bg"
+    android:orientation="vertical"
+    tools:ignore="MissingConstraints">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="风险提示"
+        android:textColor="@color/color_222F4D"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:lineSpacingMultiplier="1.2"
+        android:text="你的提币操作一旦完成，对应的资产所有权将由您变更为目标地址所对对应的账户所有人享有，请您务必在提币操作前，仔细核对提币地址信息，确保提币属于自愿行为，并确认不涉及任何传销、非法集资、诈骗等违法情形，谨防上当受骗，避免造成不必要的财产损失"
+        android:textColor="@color/color_222F4D"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+    <Button
+        android:id="@+id/bt_cancel"
+        android:layout_width="126dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/selector_btn_bg2"
+        android:text="取消"
+        android:textColor="@color/color_222F4D"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/bt_confirm"
+        app:layout_constraintTop_toBottomOf="@id/tv_msg" />
+
+    <Button
+        android:id="@+id/bt_confirm"
+        android:layout_width="126dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/selector_btn_bg1"
+        android:text="确认"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/bt_cancel"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_msg" />
+</androidx.constraintlayout.widget.ConstraintLayout>

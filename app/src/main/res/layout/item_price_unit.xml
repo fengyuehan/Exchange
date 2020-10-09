@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tv_coin_price_unit"
+        android:layout_width="104dp"
+        android:layout_height="38dp"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/selector_order_status_bg"
+        android:gravity="center"
+        android:text="买入"
+        android:textColor="@drawable/selector_order_status_text_color"
+        android:textSize="16sp" />
+</LinearLayout>

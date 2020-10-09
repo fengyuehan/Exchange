@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="MissingConstraints">
+
+    <include
+        android:id="@+id/ic_title"
+        layout="@layout/l_title" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@color/color_EDEEF0"
+        app:layout_constraintTop_toBottomOf="@id/ic_title" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_selected"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/shape_coin_out_bg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ic_title">
+
+        <ImageView
+            android:id="@+id/iv_symbol_img"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="15dp"
+            android:src="@drawable/icon_announcement"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="BTC"
+            android:textColor="@color/color_222F4D"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/iv_symbol_img"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="11dp"
+            android:drawableEnd="@drawable/icon_arrow_right"
+            android:drawablePadding="8dp"
+            android:padding="5dp"
+            android:text="选择币种"
+            android:textColor="@color/tab_normal"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_address_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="32dp"
+        android:text="提币地址"
+        android:textColor="@color/color_222F4D"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cl_selected" />
+
+    <EditText
+        android:id="@+id/et_address"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginStart="15dp"
+        android:background="@drawable/selector_edit_bg"
+        android:gravity="center_vertical"
+        android:hint="输入或粘贴地址"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_address_tip" />
+
+    <ImageView
+        android:id="@+id/iv_address"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginEnd="15dp"
+        android:src="@drawable/icon_announcement"
+        app:layout_constraintBottom_toBottomOf="@id/et_address"
+        app:layout_constraintRight_toRightOf="@id/et_address"
+        app:layout_constraintTop_toTopOf="@id/et_address" />
+
+    <ImageView
+        android:id="@+id/iv_scan"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/icon_announcement"
+        app:layout_constraintBottom_toBottomOf="@id/et_address"
+        app:layout_constraintRight_toLeftOf="@id/iv_address"
+        app:layout_constraintTop_toTopOf="@id/et_address" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="16dp"
+        android:layout_marginEnd="15dp"
+        android:background="@color/color_dfdfe0"
+        app:layout_constraintBottom_toBottomOf="@id/et_address"
+        app:layout_constraintRight_toLeftOf="@id/iv_address"
+        app:layout_constraintTop_toTopOf="@id/et_address" />
+
+    <TextView
+        android:id="@+id/tv_amount_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="32dp"
+        android:text="数量"
+        android:textColor="@color/color_222F4D"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_address" />
+
+    <EditText
+        android:id="@+id/et_amount"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginStart="15dp"
+        android:background="@drawable/selector_edit_bg"
+        android:gravity="center_vertical"
+        android:hint="最小提币数量0.01"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_amount_tip" />
+
+    <TextView
+        android:id="@+id/tv_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:text="全部"
+        android:textColor="#356DF0"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/et_amount"
+        app:layout_constraintRight_toRightOf="@id/et_amount"
+        app:layout_constraintTop_toTopOf="@id/et_amount" />
+
+    <TextView
+        android:id="@+id/tv_symbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:text="BTC"
+        android:textColor="@color/tab_normal"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/et_amount"
+        app:layout_constraintRight_toLeftOf="@id/tv_all"
+        app:layout_constraintTop_toTopOf="@id/et_amount" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="16dp"
+        android:layout_marginEnd="15dp"
+        android:background="@color/color_dfdfe0"
+        app:layout_constraintBottom_toBottomOf="@id/et_amount"
+        app:layout_constraintRight_toLeftOf="@id/tv_all"
+        app:layout_constraintTop_toTopOf="@id/et_amount" />
+
+    <TextView
+        android:id="@+id/tv_fee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="26dp"
+        android:text="手续费"
+        android:textColor="@color/color_222F4D"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_amount" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="0.00000000 BTC"
+        android:textColor="@color/tab_normal"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_fee"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="16dp"
+        android:background="#0A222F4D"
+        android:lineSpacingMultiplier="1.7"
+        android:padding="16dp"
+        android:text="最小提币数量为：0.01 BTC\n为保障资金安全，当您账户安全策略变更、密码修改、我们会对提币进行人工审核，请耐心等待工作人员电话或邮件联系。"
+        android:textColor="@color/tab_normal"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_fee" />
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/selector_btn_bg1"
+        android:enabled="true"
+        android:text="下一步"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        android:text="到账数量"
+        android:textColor="@color/tab_normal"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@id/btn_next"
+        app:layout_constraintLeft_toLeftOf="@id/btn_next" />
+
+    <TextView
+        android:id="@+id/tv_real_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:text="0.00000000 BTC"
+        android:textColor="@color/color_222F4D"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/btn_next"
+        app:layout_constraintRight_toRightOf="@id/btn_next" />
+</androidx.constraintlayout.widget.ConstraintLayout>

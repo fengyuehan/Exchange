@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="52dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="15dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DOCK"
+            android:textColor="@color/color_222F4D"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/BTC"
+            android:textColor="@color/color_C8CBD2"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="0.000074"
+        android:textColor="@color/color_222F4D"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_value"
+        android:layout_width="74dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center_vertical|end"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/shape_quotation_bg"
+        android:gravity="center"
+        android:text="+40.68%"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_gravity="bottom"
+        android:background="@color/color_dfdfe0" />
+</FrameLayout>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/color_222F4D"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <com.stx.xhb.androidx.XBanner
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="4dp"
+            app:AutoPlayTime="3000"
+            app:isAutoPlay="false"
+            app:clipChildrenLeftRightMargin="20dp"
+            app:isClipChildrenMode="true"
+            app:isHandLoop="true"
+            app:isShowIndicatorOnlyOne="true"
+            app:isShowNumberIndicator="false"
+            app:pageChangeDuration="800"
+            app:pointNormal="@drawable/shape_point_normal"
+            app:pointSelect="@drawable/shape_point_selected"
+            app:pointsContainerBackground="@android:color/transparent"
+            app:pointsPosition="CENTER" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:paddingStart="15dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/icon_announcement" />
+
+            <com.superluo.textbannerlibrary.TextBannerView
+                android:id="@+id/tv_banner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                app:setDirection="bottom_to_top"
+                app:setGravity="left"
+                app:setTextColor="#222F4D" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_dfdfe0" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vp_recommend"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:overScrollMode="never" />
+
+        <com.jumai.antexchange.view.PointIndicatorView
+            android:id="@+id/inv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:indicatorPadding="10dp"
+            app:normalResId="@drawable/shape_point_normal1"
+            app:selectedResId="@drawable/shape_point_selected" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="@color/color_dfdfe0" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_function"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:overScrollMode="never" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="@color/color_dfdfe0" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tbl"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:fillViewport="true"
+            app:tabIndicatorFullWidth="false"
+            app:tabIndicatorHeight="0dp"
+            app:tabMode="fixed"
+            app:tabRippleColor="@android:color/transparent"
+            app:tabSelectedTextColor="@color/color_222F4D"
+            app:tabTextAppearance="@style/HomeTab"
+            app:tabTextColor="@color/tab_normal"
+            app:tabUnboundedRipple="false" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_dfdfe0" />
+
+        <com.jumai.antexchange.view.NestedViewPager
+            android:id="@+id/vp_top"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

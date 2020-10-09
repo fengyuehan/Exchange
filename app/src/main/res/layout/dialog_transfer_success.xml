@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="315dp"
+    android:layout_height="180dp">
+    <TextView
+        android:id="@+id/tv_info"
+        android:text="资金已成功划转至币币账户，马上进行币币交易"
+        android:textSize="18sp"
+        android:textColor="#222F4D"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:text="取消"
+            android:textSize="16sp"
+            android:textColor="#222F4D"
+            android:gravity="center"
+            android:layout_marginLeft="24dp"
+            android:background="@drawable/shape_transfer_cancel"
+            android:layout_width="126dp"
+            android:layout_height="44dp"/>
+        <TextView
+            android:id="@+id/tv_transfer"
+            android:text="去交易"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/shape_transfer"
+            android:layout_width="126dp"
+            android:layout_height="44dp"/>
+    </LinearLayout>
+</LinearLayout>

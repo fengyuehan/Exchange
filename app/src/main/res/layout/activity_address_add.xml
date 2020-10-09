@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/l_title" />
+
+    <TextView
+        android:id="@+id/tv_title_address"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginStart="15dp"
+        android:gravity="center_vertical"
+        android:text="添加BTC地址"
+        android:textColor="@color/color_222F4D"
+        android:textSize="22sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="32dp"
+        android:text="提币地址"
+        android:textColor="@color/tab_normal"
+        android:textSize="14sp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="10dp">
+
+        <EditText
+            android:id="@+id/et_address"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/selector_edit_bg"
+            android:gravity="center_vertical"
+            android:hint="输入或粘贴地址"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/iv_scan"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical|end"
+            android:background="@drawable/icon_announcement"
+            android:padding="5dp" />
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="24dp"
+        android:text="备注"
+        android:textColor="@color/tab_normal"
+        android:textSize="14sp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="10dp">
+
+        <EditText
+            android:id="@+id/et_memo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/selector_edit_bg"
+            android:gravity="center_vertical"
+            android:hint="输入备注"
+            android:maxLength="16"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_length"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:text="0/16"
+            android:textColor="@color/tab_normal"
+            android:textSize="16sp" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/selector_btn_bg1"
+        android:enabled="false"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+</LinearLayout>

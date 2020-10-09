@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+        <ImageView
+            android:id="@+id/iv_back"
+            android:src="@drawable/icon_go_back"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:layout_marginLeft="11dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:text="关于我们"
+            android:textSize="18sp"
+            android:textColor="#222F4D"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_below="@+id/rl_title"
+        android:layout_marginTop="93dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="52dp"
+        android:layout_height="52dp"/>
+
+    <TextView
+        android:id="@+id/tv_version"
+        android:layout_below="@+id/iv_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:text="版本 V1.1.0"
+        android:textColor="#222F4D"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:text="ANT Exchange"
+        android:textSize="16sp"
+        android:textColor="#222F4D"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

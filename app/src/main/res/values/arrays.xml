@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="switch_tabs">
+        <item>买入</item>
+        <item>卖出</item>
+    </array>
+    <array name="decimal_number">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </array>
+
+    <array name="tx_show_type">
+        <item>默认</item>
+        <item>买盘</item>
+        <item>卖盘</item>
+    </array>
+</resources>

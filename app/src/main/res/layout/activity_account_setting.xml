@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/l_title" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@color/color_EDEEF0" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="32dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="安全级别"
+            android:textColor="@color/color_222F4D"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="低"
+            android:textColor="@color/color_F0486F"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <com.jumai.antexchange.view.SecurityLevelView
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="15dp"
+        app:level="medium" />
+
+    <TextView
+        android:id="@+id/tv_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        android:text="请至少开启2项安全验证"
+        android:textColor="@color/color_F0486F"
+        android:textSize="14sp" />
+
+    <FrameLayout
+        android:id="@+id/fl_phone"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginTop="16dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="手机"
+            android:textColor="@color/color_222F4D"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_phone_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:drawableEnd="@drawable/icon_arrow_right"
+            android:drawablePadding="8dp"
+            android:text="已开启"
+            android:textColor="@color/tab_normal"
+            android:textSize="16sp" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_EDEEF0" />
+
+    <FrameLayout
+        android:id="@+id/fl_email"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="邮箱"
+            android:textColor="@color/color_222F4D"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_email_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:drawableEnd="@drawable/icon_arrow_right"
+            android:drawablePadding="8dp"
+            android:text="未绑定"
+            android:textColor="@color/tab_normal"
+            android:textSize="16sp" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_EDEEF0" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="40dp"
+        android:text="交易设置"
+        android:textColor="@color/tab_normal"
+        android:textSize="16sp" />
+
+    <FrameLayout
+        android:id="@+id/fl_asset_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginTop="8dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="资金密码"
+            android:textColor="@color/color_222F4D"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_asset_pwd_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:drawableStart="@drawable/icon_alarm"
+            android:drawableEnd="@drawable/icon_arrow_right"
+            android:drawablePadding="8dp"
+            android:text="未设置"
+            android:textColor="@color/tab_normal"
+            android:textSize="16sp" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_EDEEF0" />
+</LinearLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:background="?attr/selectableItemBackground"
+    tools:ignore="MissingConstraints">
+
+    <ImageView
+        android:id="@+id/iv_symbol_img"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="15dp"
+        android:background="@drawable/icon_logo"
+        app:layout_constraintBottom_toTopOf="@id/tv_key_available"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_symbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="USDT"
+        android:textColor="@color/color_222F4D"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toRightOf="@id/iv_symbol_img"
+        app:layout_constraintTop_toTopOf="@id/iv_symbol_img" />
+
+    <TextView
+        android:id="@+id/tv_key_available"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="可用"
+        android:textColor="@color/color_40222F4D"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@id/tv_available"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/tv_key_frozen"
+        app:layout_constraintTop_toBottomOf="@id/iv_symbol_img" />
+
+    <TextView
+        android:id="@+id/tv_key_frozen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="冻结"
+        android:textColor="@color/color_40222F4D"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_key_available"
+        app:layout_constraintLeft_toRightOf="@id/tv_key_available"
+        app:layout_constraintRight_toLeftOf="@id/tv_key_cny" />
+
+    <TextView
+        android:id="@+id/tv_key_cny"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:text="折合(CNY)"
+        android:textColor="@color/color_40222F4D"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_key_available"
+        app:layout_constraintLeft_toRightOf="@id/tv_key_frozen"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_available"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100.00884589"
+        android:textColor="@color/color_222F4D"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/tv_key_available"
+        app:layout_constraintTop_toBottomOf="@id/tv_key_available" />
+
+    <TextView
+        android:id="@+id/tv_frozen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100.00884589"
+        android:textColor="@color/color_222F4D"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_available"
+        app:layout_constraintLeft_toLeftOf="@id/tv_key_frozen" />
+
+    <TextView
+        android:id="@+id/tv_cny"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100.00884589"
+        android:textColor="@color/color_222F4D"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_available"
+        app:layout_constraintRight_toRightOf="@id/tv_key_cny" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_EDEEF0"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

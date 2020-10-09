@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="5dp"
+    android:layout_weight="1"
+    android:orientation="vertical"
+    android:paddingBottom="22dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp">
+
+        <TextView
+            android:id="@+id/tv_tx_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="价格"
+            android:textColor="@color/tab_normal"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/tv_tx_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|end"
+            android:text="数量"
+            android:textColor="@color/tab_normal"
+            android:textSize="11sp" />
+    </FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_sell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:minHeight="135dp"
+        android:overScrollMode="never" />
+
+    <TextView
+        android:id="@+id/tv_latest_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="10338.99"
+        android:textColor="@color/color_F0486F"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_latest_cny"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="≈72500.30 CNY"
+        android:textColor="@color/tab_normal"
+        android:textSize="11sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_buy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:minHeight="135dp"
+        android:overScrollMode="never" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="22dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/shape_transaction_switch">
+
+        <FrameLayout
+            android:id="@+id/fl_keep_num_set"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_keep_num_set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableEnd="@drawable/icon_triangle_down"
+                android:drawablePadding="2dp"
+                android:text="4位小数"
+                android:textColor="@color/tab_normal"
+                android:textSize="12sp" />
+        </FrameLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/color_dfdfe0" />
+
+        <FrameLayout
+            android:id="@+id/fl_showing_set"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableEnd="@drawable/icon_triangle_down"
+                android:drawablePadding="2dp"
+                android:text="默认"
+                android:textColor="@color/tab_normal"
+                android:textSize="12sp" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,185 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.0"
+    defaultConfig {
+        applicationId "com.jumai.antexchange"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0.0"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        debug {
+
+        }
+
+        release {
+            //签名文件
+            storeFile file('../app/AntExchange.jks')
+            storePassword "ant123456"
+            keyAlias "ant"
+            //签名密码
+            keyPassword "ant123456"
+            v2SigningEnabled false
+        }
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+
+        release {
+            //设置正式包名称
+            applicationVariants.all { variant ->
+                variant.outputs.all { output ->
+                    project.ext { appName = 'AntExchange' }
+                    def newName = output.outputFile.name
+                    newName = newName.replace("test", "$project.ext.appName-")
+                    newName = newName.replace("release", defaultConfig.versionName)
+                    outputFileName = new File(newName)
+                }
+            }
+
+            /* applicationVariants.all { variant ->
+                 variant.outputs.all { output ->
+                     variant.packageApplicationProvider.get().outputDirectory = new File(project.rootDir.absolutePath + "/apk")
+
+                     def fileName
+                     if (output.name == 'debug') {
+                         fileName = "AntExchange-v${defaultConfig.versionName}-test.apk"
+                     } else {
+                         fileName = "AntExchange-v${defaultConfig.versionName}-release.apk"
+                     }
+                     output.outputFileName = fileName
+                 }
+             }*/
+            //开启混淆
+            minifyEnabled true
+            //Zipalign优化
+            zipAlignEnabled true
+            //移除无用的resource文件
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.6.1'
+    implementation 'com.squareup.okhttp3:okhttp:4.2.0'
+    implementation 'com.squareup.okio:okio:2.4.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.6.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.12'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'com.github.tbruyelle:rxpermissions:0.10.2'
+    implementation 'com.trello.rxlifecycle3:rxlifecycle-components:3.0.0'
+
+    implementation 'com.jakewharton:butterknife:10.2.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
+    implementation 'com.zhy.base:fileprovider:1.0.0'
+    //Rxbus2
+    implementation('com.hwangjr.rxbus:rxbus:2.0.1') {
+        exclude group: 'com.jakewharton.timber', module: 'timber'
+    }
+
+    //日志打印
+    implementation 'com.github.tianzhijiexian:logger:1.1.9'
+    implementation 'com.jakewharton.timber:timber:4.7.1'
+
+    implementation 'com.blankj:utilcode:1.25.9'
+
+    implementation("com.github.bumptech.glide:glide:4.9.0") {
+        exclude group: "com.android.support"
+    }
+
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    implementation "com.github.bumptech.glide:okhttp3-integration:4.9.0"
+
+    //屏幕适配
+    implementation 'me.jessyan:autosize:1.1.2'
+
+    //沉浸式状态栏
+    implementation 'com.gyf.immersionbar:immersionbar:3.0.0'
+
+    //recyclerview
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+
+    //dagger
+    api 'com.google.dagger:dagger:2.24'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.24'
+
+    //leakcanary
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.0-alpha-2'
+
+    //进度条
+    implementation 'com.kaopiz:kprogresshud:1.2.0'
+
+    implementation 'com.google.android.material:material:1.0.0'
+
+    //SmartRefreshLayout
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-x'  //1.0.5及以前版本的老用户升级需谨慎，API改动过大
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-x'  //没有使用特殊Header，可以不加这行
+
+    //BaseQuickAdapter
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.47'
+
+    //cardslideview
+    implementation 'com.crazysunj:cardslideview:2.0.0'
+
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+
+    //文字轮播
+    implementation 'com.superluo:textbannerview:1.0.5'
+
+
+    //轮播
+    implementation 'com.github.xiaohaibin:XBanner:androidx_v1.0.2'
+
+    implementation 'lib.kingja.switchbutton:switchbutton:1.1.8'
+
+    //flowlayout
+    implementation 'com.hyman:flowlayout-lib:1.1.2'
+    implementation project(path: ':KLineChartLib')
+
+    //zing
+    //implementation 'cn.bingoogolapple:bga-qrcode-zxing:1.3.6'
+
+    //ZXing扫描
+    implementation 'com.mylhyl:zxingscanner:2.1.6'
+
+    implementation 'androidx.multidex:multidex:2.0.0'
+
+}
